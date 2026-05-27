@@ -1,0 +1,31 @@
+# Mindlytics Tools
+> Free tools and converter aggregator. 2,000+ tools organised five ways — by category, profession, usage, industry, and life moment. Sydney, Australia.
+
+## What this site is
+A free, no-signup tools aggregator. Every everyday converter, calculator, and utility — organised so anyone finds their path in.
+
+## Key tools available
+- Live currency converter (ECB / Frankfurter — indicative, no key required)
+- Crypto exchange comparison (AU registered, AUSTRAC, ASIC)
+- Unit converters, date calculators, finance calculators (client-side, no data stored)
+- AI tool discovery — six browse paths
+- Pinpoint: AI-powered life-situation roadmap (multilingual)
+
+## Five ways to browse
+1. By Category (28 categories)
+2. By Profession (20 professions)
+3. By Usage (8 patterns)
+4. By Industry (12 industries)
+5. By Life Moment (12 moments)
+
+## Honesty notes
+- All tools are informational only — not financial, medical, or legal advice
+- Files processed in browser — never stored on servers
+- Currency and crypto data labelled with source and marked indicative
+- Affiliate links disclosed
+
+## Contact
+Raj Singh · Sydney, Australia · raj@artigellence.com
+
+## URL
+https://tools.mindlytics.xyz
