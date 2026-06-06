@@ -1920,6 +1920,150 @@ body.light-mode .data-strip-cell { background: rgba(255,255,255,0.55); }
 .doors-intro strong { color: var(--white); }
 .doors-intro em { color: var(--teal-bright); font-style: italic; }
 
+/* ═══ WEDGE BROWSER · 6-door tabbed tool navigator ═══ */
+.wedge-browser {
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  background: var(--bg-2);
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+.wedge-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 1px solid var(--line);
+  background: var(--bg-3);
+}
+.wedge-tab {
+  flex: 1;
+  min-width: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 16px 14px;
+  background: transparent;
+  border: none;
+  border-right: 1px solid var(--line);
+  border-bottom: 2px solid transparent;
+  color: var(--gray-2);
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all .2s var(--ease);
+}
+.wedge-tab:last-child { border-right: none; }
+.wedge-tab:hover { color: var(--white); background: rgba(201,162,39,0.04); }
+.wedge-tab.active {
+  color: var(--gold-bright);
+  border-bottom-color: var(--gold);
+  background: var(--bg-2);
+}
+.wedge-count {
+  font-size: 10px;
+  padding: 2px 7px;
+  border-radius: 999px;
+  background: var(--bg-4);
+  color: var(--gray);
+}
+.wedge-tab.active .wedge-count { background: var(--gold-soft); color: var(--gold); }
+.wedge-filters {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 16px 22px;
+  border-bottom: 1px solid var(--line);
+}
+.wedge-filter-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  color: var(--gray);
+  margin-right: 4px;
+}
+.wedge-filter {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 13px;
+  background: var(--bg-3);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--gray-2);
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: .04em;
+  cursor: pointer;
+  transition: all .15s var(--ease);
+}
+.wedge-filter:hover { border-color: var(--gold-deep); color: var(--white); }
+.wedge-filter.active { background: var(--gold); border-color: var(--gold); color: var(--bg); }
+.wedge-filter .dot { width: 7px; height: 7px; border-radius: 50%; }
+.wedge-filter .dot.free { background: var(--teal-bright); }
+.wedge-filter .dot.trial { background: var(--gold); }
+.wedge-filter .dot.student { background: var(--violet-bright); }
+.wedge-panel {
+  padding: 24px 22px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  min-height: 180px;
+}
+@media (max-width: 1100px) { .wedge-panel { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 720px) { .wedge-panel { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 460px) { .wedge-panel { grid-template-columns: 1fr; } }
+.wedge-chip {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 13px 15px;
+  background: var(--bg-3);
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  cursor: pointer;
+  transition: all .15s var(--ease);
+  text-align: left;
+}
+.wedge-chip:hover { border-color: var(--gold); background: var(--bg-4); transform: translateY(-2px); }
+.wedge-chip-name { font-family: var(--sans); font-size: 13.5px; font-weight: 500; color: var(--white); }
+.wedge-chip-meta { font-family: var(--mono); font-size: 9.5px; letter-spacing: .06em; color: var(--gray); }
+.wedge-chip-tier { display: inline-flex; gap: 4px; margin-top: 4px; }
+.wedge-chip-tier .pip { width: 6px; height: 6px; border-radius: 50%; }
+.wedge-chip-tier .pip.free { background: var(--teal-bright); }
+.wedge-chip-tier .pip.trial { background: var(--gold); }
+.wedge-chip-tier .pip.student { background: var(--violet-bright); }
+.wedge-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding: 16px 22px;
+  border-top: 1px solid var(--line);
+  background: var(--bg-3);
+}
+.wedge-foot #wedgeFootText { font-family: var(--mono); font-size: 10.5px; letter-spacing: .06em; color: var(--gray-2); }
+.wedge-open-finder {
+  padding: 9px 16px;
+  background: var(--gold);
+  color: var(--bg);
+  border: none;
+  border-radius: 7px;
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all .15s var(--ease);
+}
+.wedge-open-finder:hover { background: var(--gold-bright); transform: translateY(-1px); }
+
 .doors-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -3274,15 +3418,15 @@ body.light-mode .legal-block { background: rgba(0, 0, 0, 0.04); }
 
     <div class="tailor-stripe">
       <span class="arrow">↳</span>
-      <span>Tailor your path · for everyone unsure where to start</span>
+      <span data-i18n="tailor_stripe">Tailor your path · for everyone unsure where to start</span>
     </div>
 
-    <h1 class="hero-h1">
+    <h1 class="hero-h1" data-i18n="hero_h1">
       <span class="tell">Tell me</span> your situation.<br>
       <span class="build">I'll build</span> the plan.
     </h1>
 
-    <p class="hero-deck">
+    <p class="hero-deck" data-i18n="hero_deck">
       In <strong>any language</strong>, in three lines or one paragraph — tell us where you are. We return a <strong>tailored 6-horizon AI plan</strong>: free tools for you today, paid tools at every budget, <em>free courses from real providers</em>, what to sell, honest income ranges. <strong>Week 1 to year 3</strong>. No signup.
     </p>
 
@@ -3391,10 +3535,10 @@ body.light-mode .legal-block { background: rgba(0, 0, 0, 0.04); }
 
         <div class="pp-controls">
           <button class="pp-go" id="ppGo">
-            <span>Build my plan</span>
+            <span data-i18n="build_btn">Build my plan</span>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </button>
-          <span class="pp-hint">Free · any language · ~10 seconds</span>
+          <span class="pp-hint" data-i18n="build_hint">Free · any language · ~10 seconds</span>
         </div>
 
         <div class="pp-examples">
@@ -4013,6 +4157,16 @@ body.light-mode .legal-block { background: rgba(0, 0, 0, 0.04); }
         <span class="nl-card-cta">Subscribe on YouTube →</span>
       </a>
 
+      <!-- Hindi podcast -->
+      <a href="https://open.spotify.com/show/2PP3RZH8nXr1Aa9oUFY2hk" target="_blank" rel="noopener" class="nl-card">
+        <div class="nl-card-top">
+          <span class="nl-card-name">AI Hindi Show</span>
+          <span class="nl-card-lang podcast">HI · podcast</span>
+        </div>
+        <p class="nl-card-desc">By AI Society. AI, machine learning & coding explained in Hindi — for Hindi-first learners.</p>
+        <span class="nl-card-cta">Listen on Spotify →</span>
+      </a>
+
       <!-- Portuguese -->
       <a href="https://open.spotify.com/show/06WROXTQYPaHpz3Mr4hQF4" target="_blank" rel="noopener" class="nl-card">
         <div class="nl-card-top">
@@ -4106,7 +4260,7 @@ body.light-mode .legal-block { background: rgba(0, 0, 0, 0.04); }
   <div class="stories-grid">
 
     <!-- 1. Mercor -->
-    <article class="story-card">
+    <article class="story-card" data-story-url="https://mercor.com">
       <div class="story-head">
         <h3 class="story-name"><a href="https://mercor.com" target="_blank" rel="noopener" class="story-name-link"><em>Mercor</em> <span class="story-ext">↗</span></a></h3>
         <span class="story-valuation">$10B · 2025</span>
@@ -4140,7 +4294,7 @@ body.light-mode .legal-block { background: rgba(0, 0, 0, 0.04); }
     </article>
 
     <!-- 2. Manus -->
-    <article class="story-card">
+    <article class="story-card" data-story-url="https://manus.im">
       <div class="story-head">
         <h3 class="story-name"><a href="https://manus.im" target="_blank" rel="noopener" class="story-name-link"><em>Manus</em> <span class="story-ext">↗</span></a></h3>
         <span class="story-valuation">$2B+ · Meta acq.</span>
@@ -4174,7 +4328,7 @@ body.light-mode .legal-block { background: rgba(0, 0, 0, 0.04); }
     </article>
 
     <!-- 3. Kalshi -->
-    <article class="story-card">
+    <article class="story-card" data-story-url="https://kalshi.com">
       <div class="story-head">
         <h3 class="story-name"><a href="https://kalshi.com" target="_blank" rel="noopener" class="story-name-link"><em>Kalshi</em> <span class="story-ext">↗</span></a></h3>
         <span class="story-valuation">$11B · Dec 2025</span>
@@ -4208,7 +4362,7 @@ body.light-mode .legal-block { background: rgba(0, 0, 0, 0.04); }
     </article>
 
     <!-- 4. OpenAI -->
-    <article class="story-card">
+    <article class="story-card" data-story-url="https://openai.com">
       <div class="story-head">
         <h3 class="story-name"><a href="https://openai.com" target="_blank" rel="noopener" class="story-name-link"><em>OpenAI</em> <span class="story-ext">↗</span></a></h3>
         <span class="story-valuation">$500B+ · 2026</span>
@@ -4242,7 +4396,7 @@ body.light-mode .legal-block { background: rgba(0, 0, 0, 0.04); }
     </article>
 
     <!-- 5. DeepSeek -->
-    <article class="story-card">
+    <article class="story-card" data-story-url="https://deepseek.com">
       <div class="story-head">
         <h3 class="story-name"><a href="https://deepseek.com" target="_blank" rel="noopener" class="story-name-link"><em>DeepSeek</em> <span class="story-ext">↗</span></a></h3>
         <span class="story-valuation">Open weights</span>
@@ -4276,7 +4430,7 @@ body.light-mode .legal-block { background: rgba(0, 0, 0, 0.04); }
     </article>
 
     <!-- 6. Cursor / Anysphere -->
-    <article class="story-card">
+    <article class="story-card" data-story-url="https://cursor.com">
       <div class="story-head">
         <h3 class="story-name"><a href="https://cursor.com" target="_blank" rel="noopener" class="story-name-link"><em>Cursor</em> <span class="story-ext">↗</span></a></h3>
         <span class="story-valuation">$500M ARR</span>
@@ -4564,53 +4718,45 @@ body.light-mode .legal-block { background: rgba(0, 0, 0, 0.04); }
 <section class="section" id="tools">
   <div class="section-head">
     <div>
-      <a href="#tools" class="eyebrow eyebrow-link"><span class="num">04</span><span>Tools · Five Doors</span> <span class="wedge-badge">★ THE WEDGE</span></a>
-      <h2 class="section-h2 h2-clickable"><a href="#" id="openToolsForm">Two thousand free tools. <span class="hlg">Five ways in.</span> <span class="h2-arrow">→</span></a></h2>
+      <a href="#tools" class="eyebrow eyebrow-link"><span class="num">04</span><span>Tools · Six Doors</span> <span class="wedge-badge">★ THE WEDGE</span></a>
+      <h2 class="section-h2 h2-clickable"><a href="#" id="openToolsForm">Tailor your path. <span class="hlg">Six doors in.</span> <span class="h2-arrow">→</span></a></h2>
     </div>
     <div class="section-head-right">
-      <span class="k">CATEGORY · PROFESSION</span>
-      <span>SKILL LEVEL · USAGE · MOMENT</span>
+      <span class="k">CATEGORY · PROFESSION · SKILL</span>
+      <span>USAGE · INDUSTRY · MOMENT</span>
     </div>
   </div>
 
   <p class="section-intro">
-    No competitor lets you walk into a tool library through five different doors. Most pick one — alphabetical, or by category. We let you find what you need by <strong>who you are, what you do, what you're trying to do right now</strong>, or what's happening in your life this month. <em>Same library. Five entry points.</em>
+    A teacher, a developer, a parent, an entrepreneur — all need different tools, but they share <strong>the same library</strong>. Each door re-organises it around <em>how you think</em>. Inside every door, a sub-facet: free now · 30-day trial · student deal. <strong>This is the navigation nobody else offers.</strong>
   </p>
 
-  <div class="doors-intro">
-    <strong>How this works:</strong> pick any door below. We surface the same library reorganised for your situation. <em>This is the navigation that nobody else offers.</em>
-  </div>
+  <!-- ═══ SIX-DOOR TABBED BROWSER (the wedge) ═══ -->
+  <div class="wedge-browser">
+    <div class="wedge-tabs" role="tablist">
+      <button class="wedge-tab active" data-door="category" role="tab">Category <span class="wedge-count">28</span></button>
+      <button class="wedge-tab" data-door="profession" role="tab">Profession <span class="wedge-count">20</span></button>
+      <button class="wedge-tab" data-door="skill" role="tab">Skill Level <span class="wedge-count">5</span></button>
+      <button class="wedge-tab" data-door="usage" role="tab">Usage <span class="wedge-count">8</span></button>
+      <button class="wedge-tab" data-door="industry" role="tab">Industry <span class="wedge-count">12</span></button>
+      <button class="wedge-tab" data-door="moment" role="tab">Moment <span class="wedge-count">12</span></button>
+    </div>
 
-  <div class="doors-grid">
-    <div class="door" data-door="category">
-      <div class="door-num">01</div>
-      <div class="door-name">By Category</div>
-      <div class="door-desc">Writing · Image · Video · Audio · Code · Data · Search · Spreadsheets · Slides — 28 categories.</div>
-      <div class="door-cta">Open finder →</div>
+    <div class="wedge-filters">
+      <span class="wedge-filter-label">Filter:</span>
+      <button class="wedge-filter active" data-filter="all">All</button>
+      <button class="wedge-filter" data-filter="free"><span class="dot free"></span>Free now</button>
+      <button class="wedge-filter" data-filter="trial"><span class="dot trial"></span>7 / 30-day trial</button>
+      <button class="wedge-filter" data-filter="student"><span class="dot student"></span>Student / concession</button>
     </div>
-    <div class="door" data-door="profession">
-      <div class="door-num">02</div>
-      <div class="door-name">By Profession</div>
-      <div class="door-desc">Designer · Writer · Marketer · Developer · Teacher · Founder · Sales · Operations — 20 roles.</div>
-      <div class="door-cta">Open finder →</div>
+
+    <div class="wedge-panel" id="wedgePanel" role="tabpanel">
+      <!-- JS renders the active door's sub-facets here -->
     </div>
-    <div class="door" data-door="skill">
-      <div class="door-num">03</div>
-      <div class="door-name">By Skill Level</div>
-      <div class="door-desc">First-time AI user · Hobbyist · Power user · Builder · Agent operator — 5 levels.</div>
-      <div class="door-cta">Open finder →</div>
-    </div>
-    <div class="door" data-door="usage">
-      <div class="door-num">04</div>
-      <div class="door-name">By Usage</div>
-      <div class="door-desc">Casual · Daily driver · Production · Mission-critical · Free tier only — 8 patterns.</div>
-      <div class="door-cta">Open finder →</div>
-    </div>
-    <div class="door" data-door="moment">
-      <div class="door-num">05</div>
-      <div class="door-name">By Life Moment</div>
-      <div class="door-desc">Job lost · Pivoting · Returning to work · Starting a business · Studying — 12 moments.</div>
-      <div class="door-cta">Open finder →</div>
+
+    <div class="wedge-foot">
+      <span id="wedgeFootText">Pick a facet to open the Tools Finder, pre-filtered for you.</span>
+      <button class="wedge-open-finder" id="wedgeOpenFinder">Open full finder →</button>
     </div>
   </div>
 
@@ -5376,6 +5522,7 @@ body.light-mode .legal-block { background: rgba(0, 0, 0, 0.04); }
         if (cur) cur.textContent = opt.dataset.lang.toUpperCase();
         langDd.classList.remove('open');
         langBtn.setAttribute('aria-expanded', 'false');
+        applyLanguage(opt.dataset.lang);
       });
     });
   }
@@ -5774,7 +5921,7 @@ body.light-mode .legal-block { background: rgba(0, 0, 0, 0.04); }
     }
 
     goBtn.disabled = false;
-    goBtn.querySelector('span').textContent = 'Build my plan';
+    goBtn.querySelector('span').textContent = (I18N[window.__ppLang] || I18N.EN).build_btn;
   }
 
   if (goBtn) goBtn.addEventListener('click', generatePlan);
@@ -5954,6 +6101,203 @@ body.light-mode .legal-block { background: rgba(0, 0, 0, 0.04); }
         <div class="modal-result-foot">⚠ Mock results — full 2,000+ tool catalogue loads after launch. Email raj@artigellence.com for early access.</div>
       `;
     });
+  }
+
+  /* ═══════════════════════════════════════════
+     STORY CARDS · whole-card click to company page
+     ═══════════════════════════════════════════ */
+  document.querySelectorAll('.story-card[data-story-url]').forEach(card => {
+    card.style.cursor = 'pointer';
+    card.addEventListener('click', e => {
+      // don't hijack clicks on inner links/buttons (share, name link)
+      if (e.target.closest('a, button')) return;
+      window.open(card.dataset.storyUrl, '_blank', 'noopener');
+    });
+  });
+
+  /* ═══════════════════════════════════════════
+     WEDGE BROWSER · 6-door tabbed navigator
+     ═══════════════════════════════════════════ */
+  const WEDGE_DATA = {
+    category: ['Writing','Image generation','Video','Audio & voice','Code','Data analysis','Search','Spreadsheets','Slides & decks','Chat assistants','Research','Translation','Transcription','Design','Marketing','SEO','Email','Social media','Automation','Analytics','PDF tools','OCR','Music','3D & CAD','Note-taking','Productivity','Customer support','E-commerce'],
+    profession: ['Designer','Writer','Marketer','Developer','Teacher','Founder','Sales','Operations','Lawyer','Accountant','Healthcare','Student','Researcher','Consultant','Recruiter','Product manager','Data analyst','Engineer','Content creator','Freelancer'],
+    skill: ['First-time AI user','Hobbyist','Power user','Builder','Agent operator'],
+    usage: ['Casual','Daily driver','Production','Mission-critical','Free tier only','Privacy-first','Offline-capable','Team & collab'],
+    industry: ['Technology','Finance','Healthcare','Education','Legal','Retail','Manufacturing','Media','Real estate','Agriculture','Logistics','Government'],
+    moment: ['Job lost','Pivoting career','Returning to work','Starting a business','Studying','Scaling up','Burnt out','Relocating','New parent','Side hustle','Career switch','Upskilling']
+  };
+  // deterministic-ish tier tags per chip (illustrative — real data loads at launch)
+  function chipTiers(i) {
+    const tiers = [];
+    tiers.push('free');                 // everything has a free option (the promise)
+    if (i % 2 === 0) tiers.push('trial');
+    if (i % 3 === 0) tiers.push('student');
+    return tiers;
+  }
+  const wedgePanel = document.getElementById('wedgePanel');
+  const wedgeTabs = document.querySelectorAll('.wedge-tab');
+  const wedgeFilters = document.querySelectorAll('.wedge-filter');
+  const wedgeFootText = document.getElementById('wedgeFootText');
+  let activeDoor = 'category';
+  let activeFilter = 'all';
+
+  function renderWedge() {
+    if (!wedgePanel) return;
+    const items = WEDGE_DATA[activeDoor] || [];
+    const filtered = items.map((name, i) => ({ name, tiers: chipTiers(i) }))
+      .filter(it => activeFilter === 'all' || it.tiers.includes(activeFilter));
+    wedgePanel.innerHTML = filtered.map(it => `
+      <button class="wedge-chip" data-door="${activeDoor}" data-facet="${it.name}">
+        <span class="wedge-chip-name">${it.name}</span>
+        <span class="wedge-chip-meta">tools available</span>
+        <span class="wedge-chip-tier">${it.tiers.map(t => `<span class="pip ${t}"></span>`).join('')}</span>
+      </button>
+    `).join('');
+    if (wedgeFootText) {
+      const filterLabel = activeFilter === 'all' ? 'all tiers' : activeFilter;
+      wedgeFootText.textContent = `${filtered.length} facets in "${activeDoor}" · showing ${filterLabel} · pick one to open the finder`;
+    }
+    // wire chips → open Tools Finder modal pre-filtered
+    wedgePanel.querySelectorAll('.wedge-chip').forEach(chip => {
+      chip.addEventListener('click', () => {
+        if (toolsModal) {
+          const sel = document.querySelector('#toolsForm select[name="door"]');
+          // map industry (not in modal) → category fallback
+          const doorVal = ['category','profession','skill','usage','moment'].includes(activeDoor) ? activeDoor : 'category';
+          if (sel) sel.value = doorVal;
+          const taskInput = document.querySelector('#toolsForm input[name="task"]');
+          if (taskInput) taskInput.value = chip.dataset.facet;
+          openModal(toolsModal);
+        }
+      });
+    });
+  }
+  wedgeTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      wedgeTabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      activeDoor = tab.dataset.door;
+      renderWedge();
+    });
+  });
+  wedgeFilters.forEach(f => {
+    f.addEventListener('click', () => {
+      wedgeFilters.forEach(x => x.classList.remove('active'));
+      f.classList.add('active');
+      activeFilter = f.dataset.filter;
+      renderWedge();
+    });
+  });
+  const wedgeOpenFinder = document.getElementById('wedgeOpenFinder');
+  if (wedgeOpenFinder) wedgeOpenFinder.addEventListener('click', () => { if (toolsModal) openModal(toolsModal); });
+  renderWedge();
+
+  /* ═══════════════════════════════════════════
+     i18n · REAL translation of key UI strings
+     Accurate translations for 11 major languages.
+     Other languages fall back to EN for UI but still
+     set the Pinpoint output language (window.__ppLang).
+     ═══════════════════════════════════════════ */
+  const I18N = {
+    EN: {
+      hero_h1: '<span class="tell">Tell me</span> your situation.<br><span class="build">I\'ll build</span> the plan.',
+      hero_deck: 'In <strong>any language</strong>, in three lines — tell us where you are. We return a <strong>tailored 6-horizon AI plan</strong>: free tools today, paid tools at every budget, <em>free courses from real providers</em>, what to sell, honest income ranges. <strong>Week 1 to year 3</strong>. No signup.',
+      tailor_stripe: 'Tailor your path · for everyone unsure where to start',
+      build_btn: 'Build my plan',
+      build_hint: 'Free · any language · ~10 seconds'
+    },
+    HI: {
+      hero_h1: '<span class="tell">अपनी स्थिति</span> बताइए।<br><span class="build">मैं योजना</span> बनाऊँगा।',
+      hero_deck: '<strong>किसी भी भाषा</strong> में, तीन पंक्तियों में बताइए कि आप कहाँ हैं। हम आपके लिए एक <strong>6-चरण की AI योजना</strong> देंगे: आज के मुफ़्त टूल, हर बजट के पेड टूल, <em>असली प्रदाताओं से मुफ़्त कोर्स</em>, क्या बेचें, और ईमानदार आय अनुमान। <strong>हफ़्ता 1 से साल 3</strong>। कोई साइनअप नहीं।',
+      tailor_stripe: 'अपना रास्ता तय करें · उन सभी के लिए जो शुरुआत को लेकर अनिश्चित हैं',
+      build_btn: 'मेरी योजना बनाएँ',
+      build_hint: 'मुफ़्त · किसी भी भाषा में · ~10 सेकंड'
+    },
+    ES: {
+      hero_h1: '<span class="tell">Cuéntame</span> tu situación.<br><span class="build">Yo construyo</span> el plan.',
+      hero_deck: 'En <strong>cualquier idioma</strong>, en tres líneas, dinos dónde estás. Te devolvemos un <strong>plan de IA de 6 horizontes</strong>: herramientas gratis hoy, herramientas de pago para cada presupuesto, <em>cursos gratis de proveedores reales</em>, qué vender y rangos de ingresos honestos. <strong>Semana 1 al año 3</strong>. Sin registro.',
+      tailor_stripe: 'Diseña tu camino · para quien no sabe por dónde empezar',
+      build_btn: 'Crear mi plan',
+      build_hint: 'Gratis · cualquier idioma · ~10 segundos'
+    },
+    FR: {
+      hero_h1: '<span class="tell">Dis-moi</span> ta situation.<br><span class="build">Je construis</span> le plan.',
+      hero_deck: 'Dans <strong>n\'importe quelle langue</strong>, en trois lignes, dis-nous où tu en es. Nous renvoyons un <strong>plan IA sur 6 horizons</strong> : outils gratuits aujourd\'hui, outils payants pour chaque budget, <em>cours gratuits de vrais fournisseurs</em>, quoi vendre et des fourchettes de revenus honnêtes. <strong>Semaine 1 à année 3</strong>. Sans inscription.',
+      tailor_stripe: 'Trace ta voie · pour ceux qui ne savent pas par où commencer',
+      build_btn: 'Créer mon plan',
+      build_hint: 'Gratuit · toutes langues · ~10 secondes'
+    },
+    DE: {
+      hero_h1: '<span class="tell">Erzähl mir</span> deine Situation.<br><span class="build">Ich baue</span> den Plan.',
+      hero_deck: 'In <strong>jeder Sprache</strong>, in drei Zeilen — sag uns, wo du stehst. Wir liefern einen <strong>maßgeschneiderten KI-Plan über 6 Horizonte</strong>: kostenlose Tools heute, kostenpflichtige Tools für jedes Budget, <em>kostenlose Kurse von echten Anbietern</em>, was du verkaufen kannst, und ehrliche Einkommensspannen. <strong>Woche 1 bis Jahr 3</strong>. Keine Anmeldung.',
+      tailor_stripe: 'Gestalte deinen Weg · für alle, die unsicher sind, wo sie anfangen sollen',
+      build_btn: 'Meinen Plan erstellen',
+      build_hint: 'Kostenlos · jede Sprache · ~10 Sekunden'
+    },
+    PT: {
+      hero_h1: '<span class="tell">Conte-me</span> sua situação.<br><span class="build">Eu construo</span> o plano.',
+      hero_deck: 'Em <strong>qualquer idioma</strong>, em três linhas, diga-nos onde você está. Devolvemos um <strong>plano de IA de 6 horizontes</strong>: ferramentas gratuitas hoje, ferramentas pagas para todos os orçamentos, <em>cursos gratuitos de provedores reais</em>, o que vender e faixas de renda honestas. <strong>Semana 1 ao ano 3</strong>. Sem cadastro.',
+      tailor_stripe: 'Trace seu caminho · para quem não sabe por onde começar',
+      build_btn: 'Criar meu plano',
+      build_hint: 'Grátis · qualquer idioma · ~10 segundos'
+    },
+    ZH: {
+      hero_h1: '<span class="tell">告诉我</span>你的情况。<br><span class="build">我来制定</span>计划。',
+      hero_deck: '用<strong>任何语言</strong>，三行字告诉我们你的处境。我们会返回一份<strong>量身定制的六阶段 AI 计划</strong>：今天可用的免费工具、各种预算的付费工具、<em>来自真实机构的免费课程</em>、可以卖什么，以及诚实的收入区间。<strong>从第 1 周到第 3 年</strong>。无需注册。',
+      tailor_stripe: '定制你的路径 · 为每一个不知从何开始的人',
+      build_btn: '生成我的计划',
+      build_hint: '免费 · 任何语言 · 约10秒'
+    },
+    AR: {
+      hero_h1: '<span class="tell">أخبرني</span> بوضعك.<br><span class="build">سأبني</span> الخطة.',
+      hero_deck: '<strong>بأي لغة</strong>، في ثلاثة أسطر، أخبرنا أين أنت. سنعيد لك <strong>خطة ذكاء اصطناعي مخصصة على 6 مراحل</strong>: أدوات مجانية اليوم، أدوات مدفوعة لكل ميزانية، <em>دورات مجانية من مزودين حقيقيين</em>، وماذا تبيع، ونطاقات دخل صادقة. <strong>من الأسبوع 1 إلى السنة 3</strong>. بدون تسجيل.',
+      tailor_stripe: 'صمّم مسارك · لكل من لا يعرف من أين يبدأ',
+      build_btn: 'أنشئ خطتي',
+      build_hint: 'مجاني · بأي لغة · ~10 ثوانٍ'
+    },
+    JA: {
+      hero_h1: '<span class="tell">あなたの状況</span>を教えてください。<br><span class="build">私が計画</span>を立てます。',
+      hero_deck: '<strong>どんな言語でも</strong>、3行であなたの状況を教えてください。<strong>6つの段階に分けたAIプラン</strong>をお返しします：今日使える無料ツール、あらゆる予算の有料ツール、<em>実在する提供元の無料講座</em>、何を売るか、そして正直な収入レンジ。<strong>第1週から3年目まで</strong>。登録不要。',
+      tailor_stripe: 'あなたの道を設計 · どこから始めるか迷うすべての人へ',
+      build_btn: 'プランを作成',
+      build_hint: '無料 · どの言語でも · 約10秒'
+    },
+    RU: {
+      hero_h1: '<span class="tell">Расскажите</span> о своей ситуации.<br><span class="build">Я составлю</span> план.',
+      hero_deck: 'На <strong>любом языке</strong>, в трёх строках расскажите, где вы находитесь. Мы вернём <strong>персональный план по ИИ на 6 горизонтов</strong>: бесплатные инструменты сегодня, платные на любой бюджет, <em>бесплатные курсы от реальных провайдеров</em>, что продавать и честные диапазоны дохода. <strong>С 1-й недели до 3-го года</strong>. Без регистрации.',
+      tailor_stripe: 'Постройте свой путь · для всех, кто не знает, с чего начать',
+      build_btn: 'Составить план',
+      build_hint: 'Бесплатно · любой язык · ~10 секунд'
+    },
+    ID: {
+      hero_h1: '<span class="tell">Ceritakan</span> situasimu.<br><span class="build">Aku susun</span> rencananya.',
+      hero_deck: 'Dalam <strong>bahasa apa pun</strong>, dalam tiga baris, ceritakan posisimu. Kami kembalikan <strong>rencana AI 6 horizon</strong>: alat gratis hari ini, alat berbayar untuk setiap anggaran, <em>kursus gratis dari penyedia nyata</em>, apa yang dijual, dan kisaran penghasilan yang jujur. <strong>Minggu 1 hingga tahun 3</strong>. Tanpa daftar.',
+      tailor_stripe: 'Rancang jalanmu · untuk semua yang ragu harus mulai dari mana',
+      build_btn: 'Buat rencana saya',
+      build_hint: 'Gratis · bahasa apa pun · ~10 detik'
+    }
+  };
+  const RTL_LANGS = ['AR', 'UR'];
+  window.__ppLang = 'EN';
+  function applyLanguage(lang) {
+    window.__ppLang = lang;
+    const dict = I18N[lang] || I18N.EN;
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      if (dict[key] != null) el.innerHTML = dict[key];
+      else if (I18N.EN[key] != null) el.innerHTML = I18N.EN[key]; // graceful fallback
+    });
+    // direction for RTL scripts
+    const isRTL = RTL_LANGS.includes(lang);
+    document.documentElement.setAttribute('lang', lang.toLowerCase());
+    document.documentElement.setAttribute('dir', isRTL ? 'rtl' : 'ltr');
+    // honest note when UI translation isn't available for this language yet
+    const foot = document.querySelector('.lang-foot');
+    if (foot) {
+      foot.textContent = I18N[lang]
+        ? `UI translated to ${lang} · Pinpoint output also in ${lang} · 25 languages total`
+        : `Pinpoint output set to ${lang} · UI translation for ${lang} rolling out · 25 total`;
+    }
   }
 
 })();
