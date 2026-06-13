@@ -1,0 +1,12 @@
+{
+  "name": "Mindlytics Tools",
+  "short_name": "Mindlytics",
+  "description": "Tell us your situation in any language. Get a personalised 6-horizon AI income roadmap — free tools, paid tiers, free courses, what to sell, honest income ranges.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0e14",
+  "theme_color": "#0a0e14",
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}
