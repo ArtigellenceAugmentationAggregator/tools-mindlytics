@@ -4476,8 +4476,8 @@ body.light-mode .legal-block { background: rgba(0, 0, 0, 0.04); }
     <!-- Inline Mindlytics signup -->
     <div class="nl-signup">
       <div class="nl-signup-l">
-        <h4>Get the Mindlytics weekly drop. <em>One Friday email.</em></h4>
-        <p>~25 hand-curated AI updates across 8 regions. No spam, no firehose. Unsubscribe in one click. <strong>Your email is never sold or shared.</strong></p>
+        <h4>Get the Mindlytics email. <em>AI tools, skills &amp; what's working.</em></h4>
+        <p>Occasional notes on AI tools, skills, and what's actually working — from Sydney. No spam, no firehose. Unsubscribe in one click. <strong>Your email is never sold or shared.</strong></p>
       </div>
       <div class="nl-signup-form">
         <span class="label">↳ JOIN FREE</span>
@@ -6918,7 +6918,15 @@ body.light-mode .legal-block { background: rgba(0, 0, 0, 0.04); }
   });
   function mailto(sub,body){window.location.href='mailto:raj@artigellence.com?subject='+encodeURIComponent(sub)+'&body='+encodeURIComponent(body);}
   var nb=document.getElementById('nlSubmit');
-  if(nb){nb.addEventListener('click',function(){var em=(document.getElementById('nlEmail')||{}).value||'';mailto('Join the weekly drop','Please add me to the Mindlytics weekly drop. Email: '+em);var m=document.querySelector('.nl-signup-meta');if(m){m.textContent='Opens your email app \u2014 manual signup during preview, Beehiiv at launch.';}});}
+  if(nb){nb.addEventListener('click',function(){
+    var inp=document.getElementById('nlEmail');var em=(inp&&inp.value||'').trim();
+    var m=document.querySelector('.nl-signup-meta');
+    var ok=/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em);
+    if(!ok){if(m){m.textContent='Please enter a valid email address.';}if(inp){inp.focus();}return;}
+    if(m){m.textContent='Opening secure signup\u2026';}
+    var url='https://mindlytics.beehiiv.com/subscribe?email='+encodeURIComponent(em)+'&utm_source=tools_mindlytics&utm_medium=footer';
+    window.open(url,'_blank','noopener');
+  });}
   var wb=document.getElementById('waitlistBtn');
   if(wb){wb.addEventListener('click',function(){mailto('Founding 500 \u2014 claim my spot','I want one of the Founding 500 spots (50% off forever).');});}
 })();
