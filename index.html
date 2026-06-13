@@ -51,7 +51,7 @@
 
 <style>
 /* ═══════════════════════════════════════════════════════
-   MINDLYTICS TOOLS v10.11 · stylesheet
+   MINDLYTICS TOOLS v10.12 · stylesheet
    Inherits design language from AAA (aaa.artigellence.com)
    and AAA Prep Engine. Tokens · typography · layout.
 ═══════════════════════════════════════════════════════ */
@@ -5381,7 +5381,7 @@ body.light-mode .legal-block { background: rgba(0, 0, 0, 0.04); }
     <!-- Footer bottom -->
     <div class="footer-bottom">
       <div>
-        © 2026 Artigellence · Mindlytics Tools · <span style="color:var(--teal-bright);">v10.11 · public preview</span>
+        © 2026 Artigellence · Mindlytics Tools · <span style="color:var(--teal-bright);">v10.12 · public preview</span>
       </div>
       <div style="display:flex;gap:18px;flex-wrap:wrap;">
         <a href="#faq">Privacy &amp; data</a>
@@ -6191,7 +6191,23 @@ body.light-mode .legal-block { background: rgba(0, 0, 0, 0.04); }
       hero_deck: '<strong>किसी भी भाषा</strong> में, तीन पंक्तियों में बताइए कि आप कहाँ हैं। हम आपके लिए एक <strong>6-चरण की AI योजना</strong> देंगे: आज के मुफ़्त टूल, हर बजट के पेड टूल, <em>असली प्रदाताओं से मुफ़्त कोर्स</em>, क्या बेचें, और ईमानदार आय अनुमान। <strong>हफ़्ता 1 से साल 3</strong>। कोई साइनअप नहीं।',
       tailor_stripe: 'अपना रास्ता तय करें · उन सभी के लिए जो शुरुआत को लेकर अनिश्चित हैं',
       build_btn: 'मेरी योजना बनाएँ',
-      build_hint: 'मुफ़्त · किसी भी भाषा में · ~10 सेकंड'
+      build_hint: 'मुफ़्त · किसी भी भाषा में · ~10 सेकंड',
+      h2_pinpoint: "अंदर आने के तीन रास्ते। <em>आपके लिए बनी एक योजना।</em>",
+      h2_listen: "पूरा विचार, <span class=\"hl\">आवाज़ में।</span>",
+      h2_aitoday: "आठ क्षेत्र। <span class=\"hl\">सत्यापित अपडेट।</span> कोई शोर नहीं। <span class=\"h2-arrow\">→</span>",
+      h2_stories: "AI कंपनियाँ <span class=\"hlg\">शून्य से यहाँ तक कैसे पहुँचीं।</span>",
+      h2_income: "असली लोग। <span class=\"hl\">असली आमदनी।</span> असली उपकरण।",
+      h2_tools: "अपना रास्ता तय करें। <span class=\"hlg\">छह दरवाज़े।</span> <span class=\"h2-arrow\">→</span>",
+      h2_process: "आपकी कहानी से <span class=\"hl\">आपकी योजना तक।</span> चार चरणों में।",
+      h2_pricing: "हमेशा मुफ़्त। <span class=\"hlg\">Pro एक बार का भुगतान।</span> टीम मासिक।",
+      h2_faq: "बारह सवाल। <span class=\"hl\">सीधे जवाब।</span>",
+      h2_contact: "तीन पंक्तियाँ। <span class=\"hlg\">24–48 घंटे में असली जवाब।</span>",
+      intro_listen: "सुनना पसंद करेंगे? यह रहा एक मिनट में Mindlytics Tools: यह क्या करता है, कैसे काम करता है, और कौन-सा वादा निभाता है। <em>वही शब्द, बोले हुए।</em>",
+      intro_aitoday: "दुनिया भर में AI में अभी सचमुच क्या आ रहा है — हर आइटम पर तारीख़ और स्रोत दर्ज।",
+      intro_stories: "जिन AI कंपनियों को आप पहले से इस्तेमाल करते हैं या करने वाले हैं, उनकी कहानियाँ — <strong>ईमानदारी से बताई गईं</strong>, समयरेखा, फ़ंडिंग और उन फ़ैसलों के साथ जो मायने रखते थे।",
+      intro_tools: "एक शिक्षक, एक डेवलपर, एक अभिभावक, एक उद्यमी — सबको अलग उपकरण चाहिए, पर सबकी <strong>एक ही लाइब्रेरी है।</strong>",
+      intro_skills: "Pinpoint आपकी स्थिति के अनुसार मुफ़्त कोर्स चुनेगा। <strong>देखने के लिए नीचे सूचीबद्ध।</strong>",
+      intro_process: "कोई जादू नहीं। कोई ब्लैक बॉक्स नहीं। आपके इनपुट और आपकी योजना के बीच ठीक यही होता है।",
     },
     ES: {
       hero_h1: '<span class="tell">Cuéntame</span> tu situación.<br><span class="build">Yo construyo</span> el plan.',
@@ -6290,35 +6306,115 @@ body.light-mode .legal-block { background: rgba(0, 0, 0, 0.04); }
       hero_deck: '用<strong>任何语言</strong>，三行字告诉我们你的处境。我们会返回一份<strong>量身定制的六阶段 AI 计划</strong>：今天可用的免费工具、各种预算的付费工具、<em>来自真实机构的免费课程</em>、可以卖什么，以及诚实的收入区间。<strong>从第 1 周到第 3 年</strong>。无需注册。',
       tailor_stripe: '定制你的路径 · 为每一个不知从何开始的人',
       build_btn: '生成我的计划',
-      build_hint: '免费 · 任何语言 · 约10秒'
+      build_hint: '免费 · 任何语言 · 约10秒',
+      h2_pinpoint: "三种方式进入。<em>一份为你定制的方案。</em>",
+      h2_listen: "完整的理念，<span class=\"hl\">大声说出来。</span>",
+      h2_aitoday: "八个地区。<span class=\"hl\">已核实的动态。</span>不刷屏。<span class=\"h2-arrow\">→</span>",
+      h2_stories: "AI 公司如何<span class=\"hlg\">从零走到今天。</span>",
+      h2_income: "真实的人。<span class=\"hl\">真实的收入。</span>真实的工具。",
+      h2_tools: "定制你的路径。<span class=\"hlg\">六扇门。</span><span class=\"h2-arrow\">→</span>",
+      h2_process: "从你的故事<span class=\"hl\">到你的方案。</span>四个步骤。",
+      h2_pricing: "永久免费。<span class=\"hlg\">Pro 一次性付费。</span>团队按月。",
+      h2_faq: "十二个问题。<span class=\"hl\">直接回答。</span>",
+      h2_contact: "三行字。<span class=\"hlg\">24 至 48 小时内得到真实答复。</span>",
+      intro_listen: "更想听？这是一分钟的 Mindlytics Tools：它做什么、如何运作、坚守什么承诺。<em>同样的内容，用说的。</em>",
+      intro_aitoday: "此刻全球 AI 领域真正在落地的事——每条都标注日期与来源。",
+      intro_stories: "你已经在用或即将使用的 AI 公司背后的故事——<strong>如实讲述</strong>，含时间线、融资以及真正重要的决定。",
+      intro_tools: "一位老师、一位开发者、一位家长、一位创业者——各需不同的工具，却共享<strong>同一个工具库。</strong>",
+      intro_skills: "Pinpoint 会根据你的情况筛选免费课程。<strong>下方列出供浏览。</strong>",
+      intro_process: "没有魔法。没有黑箱。这就是从你输入到方案生成之间发生的全部过程。",
     },
     AR: {
       hero_h1: '<span class="tell">أخبرني</span> بوضعك.<br><span class="build">سأبني</span> الخطة.',
       hero_deck: '<strong>بأي لغة</strong>، في ثلاثة أسطر، أخبرنا أين أنت. سنعيد لك <strong>خطة ذكاء اصطناعي مخصصة على 6 مراحل</strong>: أدوات مجانية اليوم، أدوات مدفوعة لكل ميزانية، <em>دورات مجانية من مزودين حقيقيين</em>، وماذا تبيع، ونطاقات دخل صادقة. <strong>من الأسبوع 1 إلى السنة 3</strong>. بدون تسجيل.',
       tailor_stripe: 'صمّم مسارك · لكل من لا يعرف من أين يبدأ',
       build_btn: 'أنشئ خطتي',
-      build_hint: 'مجاني · بأي لغة · ~10 ثوانٍ'
+      build_hint: 'مجاني · بأي لغة · ~10 ثوانٍ',
+      h2_pinpoint: "ثلاث طرق للدخول. <em>خطة واحدة مصممة لك.</em>",
+      h2_listen: "الفكرة كاملةً، <span class=\"hl\">بصوت مسموع.</span>",
+      h2_aitoday: "ثماني مناطق. <span class=\"hl\">أخبار موثّقة.</span> دون ضجيج. <span class=\"h2-arrow\">→</span>",
+      h2_stories: "كيف وصلت شركات الذكاء الاصطناعي <span class=\"hlg\">من الصفر إلى هنا.</span>",
+      h2_income: "أشخاص حقيقيون. <span class=\"hl\">دخل حقيقي.</span> أدوات حقيقية.",
+      h2_tools: "صمّم مسارك. <span class=\"hlg\">ستة أبواب.</span> <span class=\"h2-arrow\">→</span>",
+      h2_process: "من قصتك <span class=\"hl\">إلى خطتك.</span> في أربع خطوات.",
+      h2_pricing: "مجاني إلى الأبد. <span class=\"hlg\">Pro دفعة واحدة.</span> الفريق شهريًا.",
+      h2_faq: "اثنا عشر سؤالًا. <span class=\"hl\">إجابات مباشرة.</span>",
+      h2_contact: "ثلاثة أسطر. <span class=\"hlg\">رد حقيقي خلال 24–48 ساعة.</span>",
+      intro_listen: "تفضّل الاستماع؟ إليك Mindlytics Tools في دقيقة: ماذا يفعل، وكيف يعمل، وما الوعد الذي يلتزم به. <em>الكلمات نفسها، منطوقة.</em>",
+      intro_aitoday: "ما يُطلق فعليًا في الذكاء الاصطناعي حول العالم الآن — كل عنصر مؤرَّخ ومذكور المصدر.",
+      intro_stories: "قصص شركات الذكاء الاصطناعي التي تستخدمها أو ستستخدمها — <strong>تُروى بصدق</strong>، مع التسلسل الزمني والتمويل والقرارات التي صنعت الفارق.",
+      intro_tools: "معلّم، مطوّر، أحد الوالدين، رائد أعمال — كلٌّ يحتاج أدوات مختلفة، لكنهم يتشاركون <strong>المكتبة نفسها.</strong>",
+      intro_skills: "سيختار Pinpoint دورات مجانية تناسب وضعك. <strong>مدرجة أدناه للتصفّح.</strong>",
+      intro_process: "لا سحر. لا صندوق أسود. هذا بالضبط ما يحدث بين ما تُدخله وخطتك.",
     },
     JA: {
       hero_h1: '<span class="tell">あなたの状況</span>を教えてください。<br><span class="build">私が計画</span>を立てます。',
       hero_deck: '<strong>どんな言語でも</strong>、3行であなたの状況を教えてください。<strong>6つの段階に分けたAIプラン</strong>をお返しします：今日使える無料ツール、あらゆる予算の有料ツール、<em>実在する提供元の無料講座</em>、何を売るか、そして正直な収入レンジ。<strong>第1週から3年目まで</strong>。登録不要。',
       tailor_stripe: 'あなたの道を設計 · どこから始めるか迷うすべての人へ',
       build_btn: 'プランを作成',
-      build_hint: '無料 · どの言語でも · 約10秒'
+      build_hint: '無料 · どの言語でも · 約10秒',
+      h2_pinpoint: "入り口は三つ。<em>あなただけの計画を一つ。</em>",
+      h2_listen: "アイデアの全体を、<span class=\"hl\">声に出して。</span>",
+      h2_aitoday: "八つの地域。<span class=\"hl\">検証済みの最新情報。</span>情報の洪水なし。<span class=\"h2-arrow\">→</span>",
+      h2_stories: "AI 企業はいかに<span class=\"hlg\">ゼロからここまで来たか。</span>",
+      h2_income: "実在の人。<span class=\"hl\">実在の収入。</span>実在のツール。",
+      h2_tools: "あなたの道を整える。<span class=\"hlg\">六つの扉。</span><span class=\"h2-arrow\">→</span>",
+      h2_process: "あなたの状況から<span class=\"hl\">計画へ。</span>四つのステップで。",
+      h2_pricing: "ずっと無料。<span class=\"hlg\">Pro は買い切り。</span>チームは月額。",
+      h2_faq: "十二の質問。<span class=\"hl\">率直な答え。</span>",
+      h2_contact: "三行で。<span class=\"hlg\">24〜48 時間以内に本物の返信を。</span>",
+      intro_listen: "聞く方が好みですか？ Mindlytics Tools を一分で：何をするか、どう動くか、守る約束。<em>同じ言葉を、音声で。</em>",
+      intro_aitoday: "いま世界の AI で実際に動いていること——各項目に日付と出典を明記。",
+      intro_stories: "あなたが既に使う、あるいはこれから使う AI 企業の物語——<strong>正直に語ります</strong>。時系列、資金調達、そして重要だった決断とともに。",
+      intro_tools: "教師、開発者、親、起業家——必要なツールは違っても、<strong>同じライブラリ</strong>を共有します。",
+      intro_skills: "Pinpoint があなたの状況に合わせて無料コースを選び出します。<strong>下に一覧で掲載。</strong>",
+      intro_process: "魔法はありません。ブラックボックスもありません。入力から計画までに起きることのすべてです。",
     },
     RU: {
       hero_h1: '<span class="tell">Расскажите</span> о своей ситуации.<br><span class="build">Я составлю</span> план.',
       hero_deck: 'На <strong>любом языке</strong>, в трёх строках расскажите, где вы находитесь. Мы вернём <strong>персональный план по ИИ на 6 горизонтов</strong>: бесплатные инструменты сегодня, платные на любой бюджет, <em>бесплатные курсы от реальных провайдеров</em>, что продавать и честные диапазоны дохода. <strong>С 1-й недели до 3-го года</strong>. Без регистрации.',
       tailor_stripe: 'Постройте свой путь · для всех, кто не знает, с чего начать',
       build_btn: 'Составить план',
-      build_hint: 'Бесплатно · любой язык · ~10 секунд'
+      build_hint: 'Бесплатно · любой язык · ~10 секунд',
+      h2_pinpoint: "Три способа войти. <em>Один план под вас.</em>",
+      h2_listen: "Вся идея — <span class=\"hl\">вслух.</span>",
+      h2_aitoday: "Восемь регионов. <span class=\"hl\">Проверенные новости.</span> Без шума. <span class=\"h2-arrow\">→</span>",
+      h2_stories: "Как компании ИИ <span class=\"hlg\">прошли путь с нуля.</span>",
+      h2_income: "Реальные люди. <span class=\"hl\">Реальный доход.</span> Реальные инструменты.",
+      h2_tools: "Настройте свой путь. <span class=\"hlg\">Шесть дверей.</span> <span class=\"h2-arrow\">→</span>",
+      h2_process: "От вашей истории <span class=\"hl\">к вашему плану.</span> За четыре шага.",
+      h2_pricing: "Бесплатно навсегда. <span class=\"hlg\">Pro — разовая оплата.</span> Команда — ежемесячно.",
+      h2_faq: "Двенадцать вопросов. <span class=\"hl\">Прямые ответы.</span>",
+      h2_contact: "Три строки. <span class=\"hlg\">Настоящий ответ за 24–48 часов.</span>",
+      intro_listen: "Предпочитаете слушать? Вот Mindlytics Tools за минуту: что делает, как работает и какое обещание держит. <em>Те же слова, вслух.</em>",
+      intro_aitoday: "Что на самом деле выходит в ИИ по миру прямо сейчас — каждый пункт с датой и указанием источника.",
+      intro_stories: "Истории компаний ИИ, которыми вы уже пользуетесь или вот-вот начнёте — <strong>рассказанные честно</strong>, с хронологией, финансированием и решениями, которые действительно имели значение.",
+      intro_tools: "Учитель, разработчик, родитель, предприниматель — всем нужны разные инструменты, но у них <strong>одна библиотека.</strong>",
+      intro_skills: "Pinpoint подберёт бесплатные курсы под вашу ситуацию. <strong>Список ниже для просмотра.</strong>",
+      intro_process: "Никакой магии. Никакого чёрного ящика. Вот что именно происходит между вашим вводом и вашим планом.",
     },
     ID: {
       hero_h1: '<span class="tell">Ceritakan</span> situasimu.<br><span class="build">Aku susun</span> rencananya.',
       hero_deck: 'Dalam <strong>bahasa apa pun</strong>, dalam tiga baris, ceritakan posisimu. Kami kembalikan <strong>rencana AI 6 horizon</strong>: alat gratis hari ini, alat berbayar untuk setiap anggaran, <em>kursus gratis dari penyedia nyata</em>, apa yang dijual, dan kisaran penghasilan yang jujur. <strong>Minggu 1 hingga tahun 3</strong>. Tanpa daftar.',
       tailor_stripe: 'Rancang jalanmu · untuk semua yang ragu harus mulai dari mana',
       build_btn: 'Buat rencana saya',
-      build_hint: 'Gratis · bahasa apa pun · ~10 detik'
+      build_hint: 'Gratis · bahasa apa pun · ~10 detik',
+      h2_pinpoint: "Tiga cara masuk. <em>Satu rencana khusus untukmu.</em>",
+      h2_listen: "Seluruh idenya, <span class=\"hl\">dengan suara.</span>",
+      h2_aitoday: "Delapan kawasan. <span class=\"hl\">Kabar terverifikasi.</span> Tanpa kebisingan. <span class=\"h2-arrow\">→</span>",
+      h2_stories: "Bagaimana perusahaan AI <span class=\"hlg\">tumbuh dari nol hingga kini.</span>",
+      h2_income: "Orang nyata. <span class=\"hl\">Penghasilan nyata.</span> Alat nyata.",
+      h2_tools: "Sesuaikan jalurmu. <span class=\"hlg\">Enam pintu.</span> <span class=\"h2-arrow\">→</span>",
+      h2_process: "Dari ceritamu <span class=\"hl\">ke rencanamu.</span> Dalam empat langkah.",
+      h2_pricing: "Gratis selamanya. <span class=\"hlg\">Pro sekali bayar.</span> Tim bulanan.",
+      h2_faq: "Dua belas pertanyaan. <span class=\"hl\">Jawaban langsung.</span>",
+      h2_contact: "Tiga baris. <span class=\"hlg\">Jawaban nyata dalam 24–48 jam.</span>",
+      intro_listen: "Lebih suka mendengarkan? Inilah Mindlytics Tools dalam satu menit: apa fungsinya, cara kerjanya, dan janji yang ditepatinya. <em>Kata yang sama, diucapkan.</em>",
+      intro_aitoday: "Apa yang benar-benar dirilis di dunia AI saat ini — setiap item bertanggal dan disebutkan sumbernya.",
+      intro_stories: "Kisah di balik perusahaan AI yang sudah atau akan kamu pakai — <strong>diceritakan dengan jujur</strong>, lengkap dengan lini masa, pendanaan, dan keputusan yang penting.",
+      intro_tools: "Seorang guru, pengembang, orang tua, wirausahawan — semua butuh alat berbeda, tetapi berbagi <strong>pustaka yang sama.</strong>",
+      intro_skills: "Pinpoint akan memilih kursus gratis sesuai situasimu. <strong>Tercantum di bawah untuk dijelajahi.</strong>",
+      intro_process: "Tanpa sihir. Tanpa kotak hitam. Inilah yang persis terjadi antara masukanmu dan rencanamu.",
     }
   };
   const RTL_LANGS = ['AR', 'UR'];
