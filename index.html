@@ -51,7 +51,7 @@
 
 <style>
 /* ═══════════════════════════════════════════════════════
-   MINDLYTICS TOOLS v10 · stylesheet
+   MINDLYTICS TOOLS v10.8 · stylesheet
    Inherits design language from AAA (aaa.artigellence.com)
    and AAA Prep Engine. Tokens · typography · layout.
 ═══════════════════════════════════════════════════════ */
@@ -3311,7 +3311,7 @@ body.light-mode .legal-block { background: rgba(0, 0, 0, 0.04); }
   .footer-cols { grid-template-columns: 1fr; }
   .hero-stats { gap: 22px; }
   .hero-stat-num { font-size: 38px; }
-  .topnav a span:not(.num) { display: none; }
+  .topnav a .num { display: none; }
 }
 
 /* ─── UTILS ─── */
@@ -3320,6 +3320,29 @@ body.light-mode .legal-block { background: rgba(0, 0, 0, 0.04); }
   position: absolute; width: 1px; height: 1px;
   padding: 0; margin: -1px; overflow: hidden;
   clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+}
+
+/* ── v10.8 upgrade layer ── */
+#privacy,#terms,#aff,#disclaimer{scroll-margin-top:96px}
+.topnav a.active{color:var(--gold);background:var(--gold-soft)}
+.topnav a.active .num{opacity:1}
+#ai-today{background:radial-gradient(900px 460px at 15% 0%,var(--teal-soft),transparent 70%)}
+#stories{background:radial-gradient(900px 460px at 85% 0%,var(--violet-soft),transparent 70%)}
+#income{background:radial-gradient(900px 460px at 15% 0%,rgba(16,185,129,.06),transparent 70%)}
+#tools{background:radial-gradient(900px 460px at 85% 0%,var(--gold-soft),transparent 70%)}
+#skills{background:radial-gradient(900px 460px at 15% 0%,rgba(248,113,113,.05),transparent 70%)}
+#process{background:radial-gradient(900px 460px at 85% 0%,rgba(15,184,169,.05),transparent 70%)}
+#faq{background:radial-gradient(900px 460px at 15% 0%,rgba(155,111,212,.045),transparent 70%)}
+#contact{background:radial-gradient(900px 460px at 50% 0%,rgba(201,162,39,.05),transparent 70%)}
+#backTop{position:fixed;right:18px;bottom:18px;z-index:90;width:42px;height:42px;border-radius:50%;border:1px solid var(--line-bright);background:var(--bg-2);color:var(--gold);font-size:18px;cursor:pointer;opacity:0;pointer-events:none;transition:opacity .25s var(--ease);box-shadow:0 4px 18px rgba(0,0,0,.45)}
+#backTop.show{opacity:1;pointer-events:auto}
+.m-more{display:none}
+@media (max-width:880px){
+  .topnav a{white-space:nowrap}
+  .topnav{justify-content:flex-start}
+  .topnav a .num{display:none}
+  .nl-grid:not(.m-open)>*:nth-child(n+5),.stories-grid:not(.m-open)>*:nth-child(n+3),.income-grid:not(.m-open)>*:nth-child(n+4){display:none}
+  .m-more{display:flex;align-items:center;gap:6px;margin:14px auto 0;padding:9px 16px;border:1px solid var(--line-bright);border-radius:999px;background:var(--bg-2);color:var(--gold);font-family:var(--mono);font-size:11px;letter-spacing:.08em;cursor:pointer}
 }
 </style>
 </head>
@@ -3427,7 +3450,7 @@ body.light-mode .legal-block { background: rgba(0, 0, 0, 0.04); }
     </h1>
 
     <p class="hero-deck" data-i18n="hero_deck">
-      In <strong>any language</strong>, in three lines or one paragraph — tell us where you are. We return a <strong>tailored 6-horizon AI plan</strong>: free tools for you today, paid tools at every budget, <em>free courses from real providers</em>, what to sell, honest income ranges. <strong>Week 1 to year 3</strong>. No signup.
+      In <strong>any language</strong>, in three lines or one paragraph — tell us where you are. We return a <strong>tailored 6-horizon AI plan</strong>: free tools for you today, paid tools at every budget, <em>free courses from real providers</em>, what to sell, honest income ranges. <em>Week 1 to year 3</em>. No signup.
     </p>
 
     <!-- ═══ PINPOINT WIDGET ═══ -->
@@ -3646,7 +3669,7 @@ body.light-mode .legal-block { background: rgba(0, 0, 0, 0.04); }
       <div class="data-strip-cell">
         <span class="ds-icon">🔒</span>
         <span class="ds-headline">Frontier ZDR endpoint</span>
-        <span class="ds-body">All AI calls go through Zero-Data-Retention endpoints (Anthropic, OpenAI enterprise tier). <strong>Stateless by architecture, not by toggle.</strong></span>
+        <span class="ds-body">All AI calls go through Zero-Data-Retention endpoints (Anthropic enterprise tier). <strong>Stateless by architecture, not by toggle.</strong></span>
       </div>
       <div class="data-strip-cell">
         <span class="ds-icon">✕</span>
@@ -3675,12 +3698,12 @@ body.light-mode .legal-block { background: rgba(0, 0, 0, 0.04); }
     </div>
     <div class="section-head-right">
       <span class="k">WEEKLY · 5–6 PER REGION</span>
-      <span>Verified · linked · time-stamped</span>
+      <span>Hand-curated · source-named · dated</span>
     </div>
   </div>
 
   <p class="section-intro">
-    What's actually shipping in AI around the world this week — filtered, dated, and linked to source. <strong>No press releases dressed as news.</strong> No "10 ways AI will change everything" clickbait. <em>Just what builders and users in each region are actually using right now.</em>
+    What's actually shipping in AI around the world this week — filtered, dated, and source-named. <strong>No press releases dressed as news.</strong> No "10 ways AI will change everything" clickbait. <em>Just what builders and users in each region are actually using right now.</em>
   </p>
 
   <div class="region-grid">
@@ -4051,7 +4074,7 @@ body.light-mode .legal-block { background: rgba(0, 0, 0, 0.04); }
   <div class="weekly-drop">
     <div class="weekly-drop-l">
       <h3>The weekly drop. <em>No firehose.</em></h3>
-      <p>One email · Friday morning Sydney · 8 regions, ~40 drops total · every link verified. <strong>No "10 things AI will change."</strong> No vendor press releases. Just what's actually shipping that you can use.</p>
+      <p>One email · Friday morning Sydney · 8 regions, ~40 drops total · every item source-named. <strong>No "10 things AI will change."</strong> No vendor press releases. Just what's actually shipping that you can use.</p>
     </div>
     <a href="#newsletter" style="padding:14px 22px;background:var(--bg-3);color:var(--white);border:1px solid var(--gold);border-radius:8px;font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;white-space:nowrap;">Subscribe free →</a>
   </div>
@@ -4223,7 +4246,7 @@ body.light-mode .legal-block { background: rgba(0, 0, 0, 0.04); }
     <div class="nl-signup">
       <div class="nl-signup-l">
         <h4>Get the Mindlytics weekly drop. <em>One Friday email.</em></h4>
-        <p>40 verified AI updates across 8 regions. No spam, no firehose. Unsubscribe in one click. <strong>Your email is never sold or shared.</strong></p>
+        <p>~40 hand-curated AI updates across 8 regions. No spam, no firehose. Unsubscribe in one click. <strong>Your email is never sold or shared.</strong></p>
       </div>
       <div class="nl-signup-form">
         <span class="label">↳ JOIN FREE</span>
@@ -4231,7 +4254,7 @@ body.light-mode .legal-block { background: rgba(0, 0, 0, 0.04); }
           <input type="email" id="nlEmail" placeholder="your@email.com" aria-label="Email">
           <button id="nlSubmit">Subscribe</button>
         </div>
-        <span class="nl-signup-meta">✓ GDPR + Australian Privacy Act compliant · ✓ No tracking pixels</span>
+        <span class="nl-signup-meta">✓ Never sold or shared · ✓ No tracking pixels · ✓ Unsubscribe anytime</span>
       </div>
     </div>
 
@@ -4249,7 +4272,7 @@ body.light-mode .legal-block { background: rgba(0, 0, 0, 0.04); }
     </div>
     <div class="section-head-right">
       <span class="k">SIX FOUNDING STORIES</span>
-      <span>Verified · sourced · honest</span>
+      <span>Public record · sourced · honest</span>
     </div>
   </div>
 
@@ -4474,7 +4497,7 @@ body.light-mode .legal-block { background: rgba(0, 0, 0, 0.04); }
       <h2 class="section-h2">Real people. <span class="hl">Real income.</span> Real tools.</h2>
     </div>
     <div class="section-head-right">
-      <span class="k">EIGHT VERIFIED PATTERNS</span>
+      <span class="k">EIGHT DOCUMENTED PATTERNS</span>
       <span>Documented · illustrative · honest</span>
     </div>
   </div>
@@ -4728,7 +4751,7 @@ body.light-mode .legal-block { background: rgba(0, 0, 0, 0.04); }
   </div>
 
   <p class="section-intro">
-    A teacher, a developer, a parent, an entrepreneur — all need different tools, but they share <strong>the same library</strong>. Each door re-organises it around <em>how you think</em>. Inside every door, a sub-facet: free now · 30-day trial · student deal. <strong>This is the navigation nobody else offers.</strong>
+    A teacher, a developer, a parent, an entrepreneur — all need different tools, but they share <strong>the same library</strong>. Each door re-organises it around <em>how you think</em>. Inside every door: pick a facet — the finder builds your free-first shortlist. <strong>This is the navigation nobody else offers.</strong>
   </p>
 
   <!-- ═══ SIX-DOOR TABBED BROWSER (the wedge) ═══ -->
@@ -4742,13 +4765,7 @@ body.light-mode .legal-block { background: rgba(0, 0, 0, 0.04); }
       <button class="wedge-tab" data-door="moment" role="tab">Moment <span class="wedge-count">12</span></button>
     </div>
 
-    <div class="wedge-filters">
-      <span class="wedge-filter-label">Filter:</span>
-      <button class="wedge-filter active" data-filter="all">All</button>
-      <button class="wedge-filter" data-filter="free"><span class="dot free"></span>Free now</button>
-      <button class="wedge-filter" data-filter="trial"><span class="dot trial"></span>7 / 30-day trial</button>
-      <button class="wedge-filter" data-filter="student"><span class="dot student"></span>Student / concession</button>
-    </div>
+    
 
     <div class="wedge-panel" id="wedgePanel" role="tabpanel">
       <!-- JS renders the active door's sub-facets here -->
@@ -5101,7 +5118,7 @@ body.light-mode .legal-block { background: rgba(0, 0, 0, 0.04); }
         <li>All AI Today regions · 8 weekly drops</li>
         <li>All AI Origin Stories</li>
         <li>All Income patterns</li>
-        <li>5 Tool Doors · full library</li>
+        <li>6 Tool Doors · full library</li>
         <li>All 12 Skills with free courses</li>
         <li><strong>WhatsApp / Email / Copy</strong> sharing</li>
         <li>Any language input</li>
@@ -5231,7 +5248,7 @@ body.light-mode .legal-block { background: rgba(0, 0, 0, 0.04); }
 
     <div class="faq-card">
       <div class="faq-card-q">Does it work on mobile?</div>
-      <div class="faq-card-a"><strong>Fully responsive</strong> — built mobile-first. Pinpoint, the five doors, sharing, and the language switcher all work on phones. The native share sheet appears where your browser supports it.</div>
+      <div class="faq-card-a"><strong>Fully responsive</strong> — built mobile-first. Pinpoint, the six doors, sharing, and the language switcher all work on phones. The native share sheet appears where your browser supports it.</div>
     </div>
 
     <div class="faq-card">
@@ -5335,7 +5352,7 @@ body.light-mode .legal-block { background: rgba(0, 0, 0, 0.04); }
         </div>
         <div class="data-point">
           <span class="k">One-click unsubscribe</span>
-          <span class="v"><strong>If you join the newsletter</strong>, your email is held by Beehiiv (GDPR + AU Privacy Act compliant). Unsubscribe instantly, anytime.</span>
+          <span class="v"><strong>If you join the newsletter</strong>, your email goes straight to the founder during preview — Beehiiv-managed delivery arrives at launch. Never sold or shared; unsubscribe with one reply, anytime.</span>
         </div>
         <div class="data-point">
           <span class="k">You own what's built</span>
@@ -5351,7 +5368,7 @@ body.light-mode .legal-block { background: rgba(0, 0, 0, 0.04); }
       <div class="foot-brand">
         <img src="data:image/jpeg;base64,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" alt="Mindlytics" class="foot-logo-img">
         <h4>Mind<em>ly</em><em class="g">tics</em> <span style="font-family:var(--mono);font-size:11px;color:var(--gray);letter-spacing:.1em;">tools</span></h4>
-        <p>A patient 24-month build by a solo founder. AI tools, AI skills, AI income — five pillars, one library, organised five ways. <strong>Free at the core. Honest by design.</strong></p>
+        <p>A patient 24-month build by a solo founder. AI tools, AI skills, AI income — five pillars, one library, organised six ways. <strong>Free at the core. Honest by design.</strong></p>
         <div class="meta">
           By Artigellence · Sydney AU<br>
           ABN 83 988 690 362<br>
@@ -5403,20 +5420,21 @@ body.light-mode .legal-block { background: rgba(0, 0, 0, 0.04); }
       <h6>⚠ Honest disclaimer · Read this in full</h6>
       <p><strong>Not financial advice.</strong> The income ranges shown in Pinpoint plans, Income Stories, and elsewhere on this site are <strong>illustrative patterns from documented public sources</strong> — Reddit threads, Upwork and Fiverr seller data, YouTube Partner Program records, public freelancer surveys, FAO and CGIAR agricultural case studies. They are <strong>not guarantees, projections, or promises of earnings</strong>. Your actual results will depend on your specific market, language fluency, effort, time available, existing skills, local demand, competition, and dozens of factors no AI roadmap can predict. Most people who start a side income earn little or nothing in the first months. Treat every number as a <em>documented possibility, not an expected outcome</em>.</p>
       <p><strong>Not legal, medical, immigration, tax, or licensed-profession advice.</strong> For any decision involving tax, investment, immigration, healthcare, visas, or a licensed profession, <strong>consult a qualified human professional in your own jurisdiction</strong>. Pinpoint output is general informational content generated by an AI model and may contain errors, omissions, or outdated information. We are not your accountant, lawyer, financial adviser, migration agent, or doctor, and no founder–client or advisory relationship is created by using this site.</p>
-      <p><strong>How your data is handled.</strong> Your situation text, uploaded files, and answers are sent to a frontier AI provider (Anthropic / OpenAI enterprise endpoints) under <strong>contractual Zero-Data-Retention with <code>data_training_opt_out=true</code></strong>. The plan is returned, the session ends, and <strong>nothing is stored on our servers</strong> — no logs, no profiles. File uploads (resume, photos of notes, scans, voice memos) are parsed <strong>in your browser</strong>; the raw file never leaves your device. Pro-tier saved plans live in <em>your</em> browser storage, not ours. A subpoena can only compel what exists — seconds after your plan renders, there is nothing to compel.</p>
+      <p id="privacy"><strong>How your data is handled.</strong> Your situation text, uploaded files, and answers are sent to a frontier AI provider (Anthropic enterprise endpoints) under <strong>contractual Zero-Data-Retention with <code>data_training_opt_out=true</code></strong>. The plan is returned, the session ends, and <strong>nothing is stored on our servers</strong> — no logs, no profiles. File uploads (resume, photos of notes, scans, voice memos) are parsed <strong>in your browser</strong>; the raw file never leaves your device. Pro-tier saved plans live in <em>your</em> browser storage, not ours. A subpoena can only compel what exists — seconds after your plan renders, there is nothing to compel.</p>
       <p><strong>Multimodal processing.</strong> Inputs may be text, PDF, DOCX, images of handwritten notes, scanned pages, or voice memos; outputs may be text, an audio brief, a PDF, or a translation into any of 25 languages. AI vision and transcription are imperfect — <em>always verify any figure, date, or instruction the model extracts from a file before you act on it.</em></p>
       <p><strong>AI limitations.</strong> Pinpoint uses a large language model. It can be confidently wrong, miss context, or invent details ("hallucinate"). It does not know your full circumstances. Use its output as a <strong>starting structure to research further</strong>, never as a final decision. Cross-check tool names, course links, prices, and income claims against the providers' own pages.</p>
       <p><strong>Tool availability changes.</strong> Free tiers can disappear, pricing can change, and companies pivot or shut down. We update the library continuously, but at any given moment some link or price may be out of date. <em>Always check the provider's current page before committing money or time.</em></p>
-      <p><strong>Affiliate disclosure.</strong> Some tool recommendations include affiliate links — each is marked <strong>"↗ aff"</strong> at the point of click. We never recommend a tool because of an affiliate kickback; recommendations are based on what fits your situation, and if the free option is the right answer we say so. Affiliate income subsidises the free tier so the core stays free.</p>
+      <p id="aff"><strong>Affiliate disclosure.</strong> Some tool recommendations include affiliate links — each is marked <strong>"↗ aff"</strong> at the point of click. We never recommend a tool because of an affiliate kickback; recommendations are based on what fits your situation, and if the free option is the right answer we say so. Affiliate income subsidises the free tier so the core stays free.</p>
       <p><strong>Finance calculators.</strong> Any finance calculator on this site is a general information tool only, operating under the ASIC general-advice carve-out (Australia). It does not consider your personal financial circumstances and must not be relied upon for any investment decision.</p>
       <p><strong>Intellectual property &amp; third parties.</strong> Tool names, course names, and company names are trademarks of their respective owners and are referenced for identification only — no endorsement or affiliation is implied unless explicitly stated. Origin Stories are summarised from public reporting and reflect our understanding at time of writing.</p>
+      <p id="terms"><strong>Terms of use (plain language).</strong> Mindlytics Tools is provided as-is, for general information, under Australian law. The disclaimers above form part of these terms. Paid-tier refunds are as stated in Pricing (Pro 14-day; Team 90-day break clause). No scraping, reselling, or misrepresentation of the service. Formal terms ship with the Pro launch.</p>
       <p><strong>Beta status.</strong> Mindlytics Tools is in active development. Features may change. Announced Pro / Team pricing is planned launch pricing — first 500 waitlist users lock in 50% off forever. <em>If you ever feel a feature or pricing change isn't honest, email Raj directly at raj@artigellence.com.</em></p>
     </div>
 
     <!-- Footer bottom -->
     <div class="footer-bottom">
       <div>
-        © 2026 Artigellence · Mindlytics Tools · <span style="color:var(--teal-bright);">v10 · public preview</span>
+        © 2026 Artigellence · Mindlytics Tools · <span style="color:var(--teal-bright);">v10.8 · public preview</span>
       </div>
       <div style="display:flex;gap:18px;flex-wrap:wrap;">
         <a href="#faq">Privacy &amp; data</a>
@@ -6149,13 +6167,12 @@ body.light-mode .legal-block { background: rgba(0, 0, 0, 0.04); }
     wedgePanel.innerHTML = filtered.map(it => `
       <button class="wedge-chip" data-door="${activeDoor}" data-facet="${it.name}">
         <span class="wedge-chip-name">${it.name}</span>
-        <span class="wedge-chip-meta">tools available</span>
-        <span class="wedge-chip-tier">${it.tiers.map(t => `<span class="pip ${t}"></span>`).join('')}</span>
+        <span class="wedge-chip-meta">open finder →</span>
       </button>
     `).join('');
     if (wedgeFootText) {
       const filterLabel = activeFilter === 'all' ? 'all tiers' : activeFilter;
-      wedgeFootText.textContent = `${filtered.length} facets in "${activeDoor}" · showing ${filterLabel} · pick one to open the finder`;
+      wedgeFootText.textContent = `${filtered.length} facets in "${activeDoor}" · pick one to open the finder`;
     }
     // wire chips → open Tools Finder modal pre-filtered
     wedgePanel.querySelectorAll('.wedge-chip').forEach(chip => {
@@ -6201,7 +6218,7 @@ body.light-mode .legal-block { background: rgba(0, 0, 0, 0.04); }
   const I18N = {
     EN: {
       hero_h1: '<span class="tell">Tell me</span> your situation.<br><span class="build">I\'ll build</span> the plan.',
-      hero_deck: 'In <strong>any language</strong>, in three lines — tell us where you are. We return a <strong>tailored 6-horizon AI plan</strong>: free tools today, paid tools at every budget, <em>free courses from real providers</em>, what to sell, honest income ranges. <strong>Week 1 to year 3</strong>. No signup.',
+      hero_deck: 'In <strong>any language</strong>, in three lines — tell us where you are. We return a <strong>tailored 6-horizon AI plan</strong>: free tools today, paid tools at every budget, <em>free courses from real providers</em>, what to sell, honest income ranges. <em>Week 1 to year 3</em>. No signup.',
       tailor_stripe: 'Tailor your path · for everyone unsure where to start',
       build_btn: 'Build my plan',
       build_hint: 'Free · any language · ~10 seconds'
@@ -6303,5 +6320,31 @@ body.light-mode .legal-block { background: rgba(0, 0, 0, 0.04); }
 })();
 </script>
 
+<script>
+(function(){
+  var hc=document.getElementById('heroClock');
+  if(hc){var tick=function(){try{hc.textContent=new Intl.DateTimeFormat('en-AU',{hour:'2-digit',minute:'2-digit',hour12:false,timeZone:'Australia/Sydney'}).format(new Date());}catch(e){hc.textContent='';}};tick();setInterval(tick,30000);}
+  var navLinks=[].slice.call(document.querySelectorAll('.topnav a[href^="#"]'));
+  var secs=navLinks.map(function(a){return document.querySelector(a.getAttribute('href'));}).filter(Boolean);
+  if('IntersectionObserver' in window&&secs.length){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var id='#'+e.target.id;navLinks.forEach(function(a){a.classList.toggle('active',a.getAttribute('href')===id);});}});},{rootMargin:'-35% 0px -55% 0px'});
+    secs.forEach(function(sx){io.observe(sx);});
+  }
+  var bt=document.createElement('button');bt.id='backTop';bt.setAttribute('aria-label','Back to top');bt.textContent='\u2191';document.body.appendChild(bt);
+  bt.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
+  window.addEventListener('scroll',function(){bt.classList.toggle('show',window.scrollY>800);},{passive:true});
+  [['nl-grid',' newsletters'],['stories-grid',' stories'],['income-grid',' income patterns']].forEach(function(p){
+    var g=document.querySelector('.'+p[0]);if(!g)return;
+    var b=document.createElement('button');b.className='m-more';b.type='button';b.textContent='Show all'+p[1]+' \u2193';
+    b.addEventListener('click',function(){var open=g.classList.toggle('m-open');b.textContent=open?'Show fewer \u2191':'Show all'+p[1]+' \u2193';});
+    g.insertAdjacentElement('afterend',b);
+  });
+  function mailto(sub,body){window.location.href='mailto:raj@artigellence.com?subject='+encodeURIComponent(sub)+'&body='+encodeURIComponent(body);}
+  var nb=document.getElementById('nlSubmit');
+  if(nb){nb.addEventListener('click',function(){var em=(document.getElementById('nlEmail')||{}).value||'';mailto('Join the weekly drop','Please add me to the Mindlytics weekly drop. Email: '+em);var m=document.querySelector('.nl-signup-meta');if(m){m.textContent='Opens your email app \u2014 manual signup during preview, Beehiiv at launch.';}});}
+  var wb=document.getElementById('waitlistBtn');
+  if(wb){wb.addEventListener('click',function(){mailto('Founding 500 \u2014 claim my spot','I want one of the Founding 500 spots (50% off forever).');});}
+})();
+</script>
 </body>
 </html>
